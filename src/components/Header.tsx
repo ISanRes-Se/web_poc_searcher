@@ -13,24 +13,14 @@ export const Header: React.FC<HeaderProps> = ({ selectedLanguage, onLanguageChan
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="flex items-center">
-                <img 
-                  src="/logo-diputacion.jpg" 
-                  alt="Diputación Foral de Álava" 
-                  className="h-12 w-auto mr-4"
-                />
-                <div className="border-l border-gray-300 pl-4">
-                  <h1 className="text-xl font-bold text-gray-900">
-                    Buscador Egoitza Araba
-                  </h1>
-                  <p className="text-sm text-gray-600">
-                    Diputación Foral de Álava
-                  </p>
-                </div>
-              </div>
+              <img
+                src="/LOGO_SEIDOR.jpg"
+                alt="Seidor"
+                className="h-12 w-auto"
+              />
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Globe className="h-4 w-4 text-gray-500" />
@@ -43,12 +33,12 @@ export const Header: React.FC<HeaderProps> = ({ selectedLanguage, onLanguageChan
                 <option value="eu">Euskera</option>
               </select>
             </div>
-            
+
             <div className="hidden md:block">
-              <img 
-                src="/logo-diputacion.gif" 
-                alt="Arabako Foru Aldundia" 
-                className="h-20 w-auto"
+              <img
+                src="/LOGO_SEIDOR.jpg"
+                alt="Seidor"
+                className="h-12 w-auto"
               />
             </div>
           </div>
