@@ -34,7 +34,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, loading, selecte
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={t.searchBar.placeholder}
-          className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:shadow-md"
+          className="w-full pl-12 pr-4 py-4 text-lg text-gray-900 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 hover:shadow-md placeholder:text-gray-500"
           disabled={loading}
         />
         <button
