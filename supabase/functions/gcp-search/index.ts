@@ -176,6 +176,8 @@ Deno.serve(async (req: Request) => {
         switch (lang) {
           case 'eu':
             return "Erantzuna euskeraz eman eta laburpena zuzen eta labur mantendu";
+          case 'en':
+            return "Keep a direct and concise summary";
           case 'es':
           default:
             return "Mantén un resumen directo y escueto";
@@ -186,6 +188,8 @@ Deno.serve(async (req: Request) => {
         switch (lang) {
           case 'eu':
             return 'eu';
+          case 'en':
+            return 'en';
           case 'es':
           default:
             return 'es';
