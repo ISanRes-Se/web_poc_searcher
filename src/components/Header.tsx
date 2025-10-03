@@ -16,11 +16,6 @@ export const Header: React.FC<HeaderProps> = ({ selectedLanguage, onLanguageChan
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-4">
             <div className="flex-shrink-0">
-              <img
-                src="/LOGO_SEIDOR.jpg"
-                alt="Seidor"
-                className="h-12 w-auto"
-              />
             </div>
             <h1 className="text-xl md:text-2xl font-bold text-gray-900">
               {t.header.title}
