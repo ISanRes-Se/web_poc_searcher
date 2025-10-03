@@ -13,14 +13,12 @@ export const Header: React.FC<HeaderProps> = ({ selectedLanguage, onLanguageChan
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center space-x-4">
-            <h1 className="text-xl md:text-2xl font-bold text-gray-900">
-              {t.header.title}
-            </h1>
-          </div>
+        <div className="flex items-center justify-center h-20 relative">
+          <h1 className="text-xl md:text-2xl font-bold text-gray-900">
+            {t.header.title}
+          </h1>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 absolute right-0">
             <Globe className="h-4 w-4 text-gray-500" />
             <select
               value={selectedLanguage}
