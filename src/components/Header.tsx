@@ -36,6 +36,7 @@ export const Header: React.FC<HeaderProps> = ({ selectedLanguage, onLanguageChan
             >
               <option value="es">Español</option>
               <option value="eu">Euskera</option>
+              <option value="en">English</option>
             </select>
           </div>
         </div>

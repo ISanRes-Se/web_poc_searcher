@@ -61,6 +61,37 @@ export const translations = {
       openInNewTab: 'Ireki leiho berrian',
     },
   },
+  en: {
+    header: {
+      title: 'Intelligent Citizen Procedures Search Engine',
+    },
+    main: {
+      heading: 'Search in Egoitza Araba',
+      subheading: 'Discover information in all indexed content from the Provincial Council of Álava',
+    },
+    searchBar: {
+      placeholder: 'Search procedures, formalities...',
+      button: 'Search',
+    },
+    assistant: {
+      title: 'Procedures Assistant',
+      description: 'Ask questions and find procedures with the help of generative AI.',
+      button: 'Chat with the Agent',
+      widgetPlaceholder: 'Write your query',
+    },
+    searchResults: {
+      resultsCount: 'Approximately {count} results for',
+      summaryTitle: 'AI-Generated Summary',
+      errorTitle: 'Search Error',
+      errorCheckList: 'Make sure you have:',
+      errorItem1: 'Configured the VITE_GCLOUD_ACCESS_TOKEN environment variable',
+      errorItem2: 'Valid Google Cloud credentials',
+      errorItem3: 'Proper CORS configuration (for production)',
+      noResults: 'No results found',
+      noResultsMessage: 'Try different keywords or check your spelling.',
+      openInNewTab: 'Open in new tab',
+    },
+  },
 };
 
 export type Language = keyof typeof translations;
