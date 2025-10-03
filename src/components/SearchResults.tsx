@@ -1,6 +1,7 @@
 import React from 'react';
 import { ExternalLink, Globe, AlertCircle, FileText, Building, Users, Sparkles } from 'lucide-react';
 import { SearchResult } from '../types/search';
+import { getTranslation, Language } from '../translations';
 
 interface SearchResultsProps {
   results: SearchResult[];
@@ -8,9 +9,11 @@ interface SearchResultsProps {
   loading: boolean;
   error: string | null;
   query: string;
+  selectedLanguage: string;
 }
 
-export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, loading, error, query }) => {
+export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, loading, error, query, selectedLanguage }) => {
+  const t = getTranslation(selectedLanguage as Language);
   if (loading) {
     return (
       <div className="w-full max-w-4xl mx-auto mt-8">
@@ -34,15 +37,15 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, 
         <div className="bg-red-50 border border-red-200 rounded-lg p-6">
           <div className="flex items-center">
             <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
-            <h3 className="text-red-800 font-medium">Error de Búsqueda</h3>
+            <h3 className="text-red-800 font-medium">{t.searchResults.errorTitle}</h3>
           </div>
           <p className="text-red-700 mt-2">{error}</p>
           <div className="mt-4 text-sm text-red-600">
-            <p>Asegúrate de tener:</p>
+            <p>{t.searchResults.errorCheckList}</p>
             <ul className="list-disc list-inside mt-1 space-y-1">
-              <li>Configurada la variable de entorno VITE_GCLOUD_ACCESS_TOKEN</li>
-              <li>Credenciales válidas de Google Cloud</li>
-              <li>Configuración CORS adecuada (para producción)</li>
+              <li>{t.searchResults.errorItem1}</li>
+              <li>{t.searchResults.errorItem2}</li>
+              <li>{t.searchResults.errorItem3}</li>
             </ul>
           </div>
         </div>
@@ -55,8 +58,8 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, 
       <div className="w-full max-w-4xl mx-auto mt-8">
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
           <Globe className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-gray-800 font-medium mb-2">No se encontraron resultados</h3>
-          <p className="text-gray-600">Prueba con diferentes palabras clave o verifica la ortografía.</p>
+          <h3 className="text-gray-800 font-medium mb-2">{t.searchResults.noResults}</h3>
+          <p className="text-gray-600">{t.searchResults.noResultsMessage}</p>
         </div>
       </div>
     );
@@ -92,7 +95,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, 
     <div className="w-full max-w-4xl mx-auto mt-8">
       <div className="mb-4">
         <p className="text-gray-600 text-sm">
-          Aproximadamente {results.length} resultados para <span className="font-medium">"{query}"</span>
+          {t.searchResults.resultsCount.replace('{count}', results.length.toString())} <span className="font-medium">"{query}"</span>
         </p>
       </div>
       
@@ -103,7 +106,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, 
               <Sparkles className="h-5 w-5 text-blue-600 mt-1" />
             </div>
             <div className="ml-3">
-              <h3 className="text-lg font-medium text-blue-900 mb-2">Resumen Generado por IA</h3>
+              <h3 className="text-lg font-medium text-blue-900 mb-2">{t.searchResults.summaryTitle}</h3>
               <div className="text-blue-800 leading-relaxed">
                 {summary.split('\n').map((paragraph, index) => (
                   <p key={index} className="mb-2 last:mb-0">
@@ -177,7 +180,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({ results, summary, 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-4 p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors duration-200"
-                title="Abrir en nueva pestaña"
+                title={t.searchResults.openInNewTab}
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
