@@ -45,7 +45,7 @@ function App() {
             Busca en Egoitza Araba
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Descubre información en todo el contenido indexado de la Diputación Foral de Álava.
+            Descubre información en todo el contenido indexado de la Diputación Foral de Álava
           </p>
         </div>
 
