@@ -84,7 +84,7 @@ function App() {
 
       <gen-search-widget
         id="gen-search-widget"
-        configid="42c67860-fdf8-44c7-8e16-a507fefe8092"
+        configid="b02ce94f-210d-4947-827b-5848b1bdc51f"
         location="eu"
         triggerid="openSearch"
         anchorstarget="_blank"
