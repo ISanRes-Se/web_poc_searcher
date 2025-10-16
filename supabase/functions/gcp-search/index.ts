@@ -6,8 +6,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const API_ENDPOINT = 'https://eu-discoveryengine.googleapis.com/v1alpha/projects/324217435708/locations/eu/collections/default_collection/engines/buscador-egoitza-full/servingConfigs/default_search:search';
-const ANSWER_ENDPOINT = 'https://eu-discoveryengine.googleapis.com/v1alpha/projects/324217435708/locations/eu/collections/default_collection/engines/buscador-egoitza-full/servingConfigs/default_search:answer';
+const API_ENDPOINT = 'https://eu-discoveryengine.googleapis.com/v1alpha/projects/272199228079/locations/eu/collections/default_collection/engines/buscador-tramites/servingConfigs/default_search:search';
+const ANSWER_ENDPOINT = 'https://eu-discoveryengine.googleapis.com/v1alpha/projects/272199228079/locations/eu/collections/default_collection/engines/buscador-tramites/servingConfigs/default_search:answer';
 
 interface GCPServiceAccount {
   type: string;
@@ -135,7 +135,7 @@ Deno.serve(async (req: Request) => {
       const requestBody = {
         query,
         pageSize: 10,
-        session: "projects/324217435708/locations/eu/collections/default_collection/engines/buscador-egoitza-full/sessions/-",
+        session: "projects/272199228079/locations/eu/collections/default_collection/engines/buscador-tramites/sessions/-",
         spellCorrectionSpec: {
           mode: 'AUTO'
         },
