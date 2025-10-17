@@ -87,7 +87,11 @@ export class SearchService {
       // Extract snippet from derivedStructData.snippets array
       let snippet = '';
       if (result.document.derivedStructData.snippets && result.document.derivedStructData.snippets.length > 0) {
-        snippet = result.document.derivedStructData.snippets[0].snippet || '';
+        const rawSnippet = result.document.derivedStructData.snippets[0].snippet || '';
+        // Filter out the "No snippet is available" message
+        if (rawSnippet && !rawSnippet.includes('No snippet is available')) {
+          snippet = rawSnippet;
+        }
       }
 
       // Use structData.url as primary, fallback to derivedStructData.url
