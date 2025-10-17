@@ -177,10 +177,10 @@ Deno.serve(async (req: Request) => {
           case 'eu':
             return "Erantzuna euskeraz eman eta laburpen labur bat sortu (3 lerro baino gutxiago)";
           case 'en':
-            return "Provide a brief summary (less than 3 lines)";
+            return "Answer in English only. Provide a brief summary (less than 3 lines)";
           case 'es':
           default:
-            return "Proporciona un resumen breve (menos de 3 líneas)";
+            return "Responde en español únicamente. Proporciona un resumen breve (menos de 3 líneas)";
         }
       };
 
