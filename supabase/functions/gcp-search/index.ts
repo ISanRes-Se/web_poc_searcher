@@ -175,12 +175,12 @@ Deno.serve(async (req: Request) => {
       const getLanguagePrompt = (lang: string) => {
         switch (lang) {
           case 'eu':
-            return "Erantzuna euskeraz eman eta laburpena zuzen eta labur mantendu";
+            return "Erantzuna euskeraz eman eta laburpen zehatz eta informatibo bat sortu";
           case 'en':
-            return "Keep a direct and concise summary";
+            return "Provide a clear and informative summary";
           case 'es':
           default:
-            return "Mantén un resumen directo y escueto";
+            return "Proporciona un resumen claro e informativo";
         }
       };
 
