@@ -175,12 +175,12 @@ Deno.serve(async (req: Request) => {
       const getLanguagePrompt = (lang: string) => {
         switch (lang) {
           case 'eu':
-            return "Erantzuna euskeraz eman eta laburpen zehatz eta informatibo bat sortu";
+            return "Erantzuna euskeraz eman eta laburpen labur bat sortu (3 lerro baino gutxiago)";
           case 'en':
-            return "Provide a clear and informative summary";
+            return "Provide a brief summary (less than 3 lines)";
           case 'es':
           default:
-            return "Proporciona un resumen claro e informativo";
+            return "Proporciona un resumen breve (menos de 3 líneas)";
         }
       };
 
