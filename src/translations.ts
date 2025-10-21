@@ -4,8 +4,8 @@ export const translations = {
       title: 'Buscador Inteligente de Trámites para la Ciudadanía',
     },
     main: {
-      heading: 'Busca en Egoitza Araba',
-      subheading: 'Descubre información en todo el contenido indexado de la Diputación Foral de Álava',
+      heading: 'Busca en la base de conocimiento de trámites',
+      subheading: 'Descubre información en todo el contenido indexado',
     },
     searchBar: {
       placeholder: 'Buscar procedimientos, trámites...',
@@ -35,8 +35,8 @@ export const translations = {
       title: 'Herritarrentzako Izapide Bilatzaile Adimentsua',
     },
     main: {
-      heading: 'Bilatu Egoitza Araba-n',
-      subheading: 'Aurkitu informazioa Arabako Foru Aldundiaren indexatutako eduki guztietan',
+      heading: 'Bilatu izapideen ezagutza-basean',
+      subheading: 'Ezagutu informazioa indexatutako eduki guztietan',
     },
     searchBar: {
       placeholder: 'Bilatu prozedurak, izapideak...',
@@ -66,8 +66,8 @@ export const translations = {
       title: 'Intelligent Citizen Procedures Search Engine',
     },
     main: {
-      heading: 'Search in Egoitza Araba',
-      subheading: 'Discover information in all indexed content from the Provincial Council of Álava',
+      heading: 'Search in the knowledge base of procedures',
+      subheading: 'Discover information across all indexed content',
     },
     searchBar: {
       placeholder: 'Search procedures, formalities...',
