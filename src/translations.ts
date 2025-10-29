@@ -1,7 +1,7 @@
 export const translations = {
   es: {
     header: {
-      title: 'Buscador Inteligente de Trámites para la Ciudadanía',
+      title: 'Buscador Inteligente sobre Bases de conocimiento',
     },
     main: {
       heading: 'Busca en la base de conocimiento de trámites',
